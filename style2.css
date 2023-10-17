@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;1,300&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:ital,wght@0,400;1,300&display=swap'); */
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  perspective: 0.5px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Prompt", sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 25px darkblue;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-width: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
+  transform-style: inherit;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
+}
+
+.header {
+  text-align: center;
+  font-size: 50px;
+}
+
+#title {
+  background-image: url("https://picsum.photos/1024/950");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.slide,
+.slide:before {
+  background: 50% 50% / cover;
+}
+
+p {
+  font-size: 14px;
+  line-height: 150%;
+  color: black;
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+}
+
+#slide1::before {
+  background-image: url("https://picsum.photos/970/500");
+  transform: translateZ(-1px) scale(2);
+}
+
+img{
+    position: absolute;
+   top:50%;
+   left: 35%;
+   width: 240px;
+   height: 240px;
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7); 
+   transform: translateZ(0.25px) scale(0.75) translateX(-94%) translateY(-100%) rotate(2deg);
+}
+
+img:last-of-type{
+  
+    transform: translateZ(0.4px) scale(0.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+#slide2{
+    background-image: url("https://picsum.photos/963/420");
+    z-index: 2;
+}
+
+.slide:nth-child(2n) .title{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#slide3::before{
+    background-image: url(https://picsum.photos/983/601);
+   transform: translateZ(-1px) scale(2);
+}
+
+#slide4{
+    background-image:url(https://picsum.photos/993/701); ;
+}
+/* .slide{
+  background-repeat: no-repeat;
+} */
